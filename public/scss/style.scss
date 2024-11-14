@@ -1,0 +1,55 @@
+/* Định dạng CSS viết bằng SASS cho form thêm khóa học */
+
+$form-bg-color: #f4f4f4;
+$form-border-color: #ddd;
+$primary-color: #3498db;
+$hover-color: darken($primary-color, 10%);
+$text-color: #333;
+
+form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: $form-bg-color;
+  border: 1px solid $form-border-color;
+  border-radius: 8px;
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: $text-color;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid $form-border-color;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: $text-color;
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+
+  button {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}
